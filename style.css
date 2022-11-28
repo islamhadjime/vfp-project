@@ -38,6 +38,9 @@ a{
 }
 
 
+img{
+  max-width: 100%;
+}
 
 
 body{
@@ -145,26 +148,157 @@ body{
   font-size: 27px;
 }
 .header__sing-title{
-  font-weight: 600px;
+  font-weight: 500;
   line-height: 24px;
   color: var(--color_2);
   margin-left: 10px;
 }
 
 
+/* ============== wrapper__center-section ======= */
+.wrapper__center-section{
+  display: flex;
+  align-items: flex-start;
+}
 
 
 
 
+/*========= asideMenu =========*/
+.asideMenu{
+  padding: 20px 30px;
+  max-width: var(--nav_b);
+
+  
+}
+
+.asideMenu__menu{
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+.asideMenu__item{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.asideMenu__item:not(:first-child){
+  margin-top: 35px;
+}
+.asideMenu__item i,
+.asideMenu__link {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--color_2);
+
+}
+.asideMenu__link{
+  margin-left: 10px;
+}
+.asideMenu__item i{
+  color:#b8c9c9 ;
+}
+
+/* ==================== main__wrapper ======= */
+.main__wrapper{
+  width: 800px;
+  padding: 0 100px;
+}
+
+
+/* ============= main__posts ======= */
+.main__posts{
+  max-width: 100%;
+  background: var(--bg__block);
+  padding: 20px;
+  border-radius: var(--br_10);
+}
+
+.main__header{
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.main__header-aftor{
+  display: flex;
+  align-items: center;
+}
+.main__header-img{
+  overflow: hidden;
+  width: 34px;
+  height: 34px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main__header-username{
+  color: var(--color_2);
+  margin-left: 10px;
+  font-weight: 500;
+}
 
 
 
 
+.main__header-link{
+  margin-left: 20px;
+}
+.main__header-link i,span{
+  color: var(--color_2);
+  font-size: 15px;
+}
+
+/*=========== main__body-conetnt ======== */
+.main__body-linPost{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.main__body-conetnt{
+  flex: 0 0 60%;
+}
+
+.main__body-image{
+  flex: 0 0 30%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.main__body-title{
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 27px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
 
 
-
-
-
+/* ========= main__footer  ===========*/
+.main__footer{
+  padding: 20px 0;
+  display: flex;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.main__footer-left{
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.main__footer i,span{
+  font-size: 18px;
+  color: var(--color_2);
+}
+.main__footer-commint{
+  justify-self: flex-end;
+}
 
 
 
