@@ -17,36 +17,70 @@
   <div id="app">
     <div class="header">
       <div class="container">
-        <div class="header__wrapper">
-        <div class="header__logo">
-          <img src="media/s.png" alt="">
+        <div class="container-header">
+          <div class="header__wrapper">
+            <div class="header__logo">
+              <img src="media/s.png" alt="">
+            </div>
+            <div class="header__form">
+              <div class="header__form-search">
+                <form  class="header__form-input"  action="">
+                  <input @click="form__click = !form__click " type="text" name="" value="" placeholder="Поиск">
+                  <i class="bi bi-search"></i>
+                </form>
+                <div v-if="form__click" class="header__form-click">
+                  <h5 class="header__form-title">
+                    Рекомендация
+                  </h5>
+                  <div class="header__form-list">
+                    <a class="header__form-item" href="">
+                      C++
+                    </a>
+                    <a class="header__form-item" href="">
+                      C
+                    </a>
+                    <a class="header__form-item" href="">
+                      C#
+                    </a>
+                    <a class="header__form-item" href="">
+                      VBS
+                    </a>
+                    <a class="header__form-item" href="">
+                      Python
+                    </a>
+                    <a class="header__form-item" href="">
+                      Js
+                    </a>
+                    <a class="header__form-item" href="">
+                      Java
+                    </a>
+                    <a class="header__form-item" href="">
+                      Rubi
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__addPost">
+                <h3 class="header__addPost-title">
+                  Добавить пост
+                </h3>
+                <i class="bi bi-arrow-down-circle-fill"></i>
+              </div>
+            </div>
+            <div class="header__users">
+            <div class="header__calition">
+              <i class="bi bi-bell-fill"></i>
+              <div class="header__calition-cicle"></div>
+            </div>
+            <div class="header__sing">
+              <i class="bi bi-person-fill"></i>
+              <h4 class="header__sing-title">
+                Войти
+              </h4>
+            </div>
+          </div>
         </div>
-        <div class="header__form">
-          <div class="header__search">
-            <input type="text" name="" value="" placeholder="Поиск">
-            <i class="bi bi-search"></i>
-          </div>
-          <div class="header__addPost">
-            <h3 class="header__addPost-title">
-              Добавить пост
-            </h3>
-            <i class="bi bi-arrow-down-circle-fill"></i>
-          </div>
         </div>
-        <div class="header__users">
-          <div class="header__calition">
-            <i class="bi bi-bell-fill"></i>
-            <div class="header__calition-cicle"></div>
-          </div>
-          <div class="header__sing">
-            <i class="bi bi-person-fill"></i>
-            <h4 class="header__sing-title">
-              Войти
-            </h4>
-          </div>
-        </div>
-
-      </div>
       </div>
     </div>
     <div class="wrapper">
@@ -97,7 +131,7 @@
           <main class="main">
             <div class="main__wrapper">
               <div class="main__posts">
-                <div class="main__post">
+                <div class="main__post" v-for="post in list_post">
                   <div class="main__header">
                     <div class="main__header-aftor">
                       <div class="main__header-img">
@@ -116,7 +150,6 @@
                     <a class="main__body-linPost">
                       <div class="main__body-conetnt">
                         <h3 class="main__body-title">
-                                                  
                           Придумываем дюжину новейших задач для собеседований в IT-компаниях   
                       </h3>
                       <p class="main__body-text">
@@ -149,7 +182,52 @@
             </div>
           </main>
           <aside class="asideRegomition">
-
+              <div class="assid__center">
+                <h5 class="title__main">
+                  Вакансия
+                </h5>
+                <ul class="asside__list">
+                  <li class="asside__item">
+                    <a class="asside__link" href="">
+                      <div class="asside__link-img">
+                        <img src="https://avatars.dzeninfra.ru/get-zen_doc/1641493/pub_5ebc7b1ef4c7c037daded168_5ec1bfa5e48cda281505b464/scale_1200" alt="">
+                      </div>
+                      <div class="asside__link-content">
+                        <h6 class="asside__link-title">DevOps-специолист</h6>
+                        <p class="assde__link-text">
+                          itchief.ru›JavaScript›Настройка VS Code для разработки на Jav
+                        </p>    
+                      </div>
+                    </a>
+                  </li>
+                  <li class="asside__item">
+                    <a class="asside__link" href="">
+                      <div class="asside__link-img">
+                        <img src="https://images.satu.kz/126166854_w640_h640_microsoft-visual-studio.jpg" alt="">
+                      </div>
+                      <div class="asside__link-content">
+                        <h6 class="asside__link-title">Cпециолист</h6>
+                        <p class="assde__link-text">
+                          itchief.ru›JavaScript›Настройка VS Code для разработки на Jav
+                        </p>    
+                      </div>
+                    </a>
+                  </li>
+                  <li class="asside__item">
+                    <a class="asside__link" href="">
+                      <div class="asside__link-img">
+                        <img src="https://user-images.githubusercontent.com/30925653/31585679-bb6db8f0-b1ce-11e7-984b-c3262a766f76.JPG" alt="">
+                      </div>
+                      <div class="asside__link-content">
+                        <h6 class="asside__link-title">DevOps</h6>
+                        <p class="assde__link-text">
+                          itchief.ru›JavaScript›Настройка VS Code для разработки на Jav
+                        </p>    
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
           </aside>
       </div>
       </div>
